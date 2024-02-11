@@ -6,18 +6,35 @@
 		<title>WaaW-Fashion</title>
 		<link rel="stylesheet" href="style/css/main.min.css" />
 		<link rel="stylesheet" href="style/css/custom.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
 		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" /> -->
 	</head>
 	<body>
 		<header>
-			<div class="container-fluid">
-				<div class="top-header row">
-					<p class="text-center mt-1"><strong> FREE SHIPING ALL ACROSS THE COUNTRY!</strong></p>
-				</div>
-				<div class="midle-header row bg-dark py-4">
-					<div class="col-2 text-primary">Waaw</div>
-					<div class="col-7 text-primary">Search box</div>
-					<div class="col-3 text-primary">Sign up</div>
+			<div class="top-header row">
+				<p class="text-center py-2"><strong> FREE SHIPING ALL ACROSS THE COUNTRY!</strong></p>
+			</div>
+			<div class="midle-header bg-dark">
+				<div class="container-fluid d-flex align-items-center justify-content-around">
+					<div>
+						<img src="assets/logo.png" class="w-25" alt="logo" />
+					</div>
+					<div class="d-flex align-items-center position-relative">
+						<input type="text" class="px-2 py-1" name="search" id="search-box" placeholder="Search Entire Store" />
+						<span class="search-icon"><i class="bi bi-search text-dark"></i></span>
+					</div>
+					<div class="text-primary">
+						<div class="d-flex align-items-center">
+							<a href="#" class="signin-btn link-underline link-underline-opacity-0 text-light">SIGN IN</a>
+							<div class="cart ms-2 px-2 py-1 d-flex align-items-center justify-content-around border border-light text-light">
+								<span><i class="bi bi-cart-dash-fill"></i></span>
+								<span class="d-inline mx-1"><strong>MY CART</strong></span>
+								<span class="item-count rounded-circle d-flex justify-content-center align-items-center">
+									<span class="text-dark">0</span>
+								</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
