@@ -63,7 +63,8 @@
 		padding: 1em 2em;
 		top: 100%;
 		min-width: 200px;
-		z-index: 1;
+		background-color: white;
+		z-index: 100;
 		border: 1px solid #ebebeb;
 		opacity: 0;
 		transform: perspective(600px) rotateX(-90deg);
