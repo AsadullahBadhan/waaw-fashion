@@ -17,7 +17,6 @@
 
 .sticky-nav {
 	display: none;
-	top: -100%;
 	z-index: 99;
 }
 
@@ -103,11 +102,27 @@
 #top-banner-carousel {
 	img {
 		width: auto;
-		height: 90vh;
+		height: 80vh;
 	}
 }
 
-.swiper-slide {
+.carousel-indicators {
+	align-items: center;
+
+	[data-bs-target] {
+		width: 0.5em;
+		height: 0.5em;
+		border-radius: 50%;
+	}
+
+	.active {
+		width: 0.8em;
+		height: 0.8em;
+	}
+}
+
+.swiper-slide,
+.product-card {
 	width: 300px;
 	min-height: 350px;
 	position: relative;
@@ -168,6 +183,20 @@
 		display: none;
 		animation: fadeEffect 1s;
 	}
+}
+
+@keyframes fadeEffect {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.new-arrival,
+.featured-product,
+.more-categories {
 	.category-item {
 		border: 1px solid #f5f5f9;
 
@@ -179,11 +208,42 @@
 	}
 }
 
-@keyframes fadeEffect {
-	from {
-		opacity: 0;
+.social-logo {
+	font-size: 2rem;
+}
+
+hr {
+	border: 1px solid white;
+	opacity: 1;
+}
+
+// back to top
+#top {
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+	width: 3em;
+	height: 3em;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background-color: #c40316;
+	border-radius: 50%;
+	padding: 0.5em;
+	z-index: 99;
+	margin-top: -100vh;
+
+	span {
+		font-size: 1.3rem;
+		color: white;
+		transition: 0.3s ease-in-out;
 	}
-	to {
-		opacity: 1;
+
+	&:hover {
+		background-color: #ac0314;
+	}
+
+	&:hover span {
+		margin-bottom: 10px;
 	}
 }

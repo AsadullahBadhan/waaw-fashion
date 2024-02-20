@@ -1,9 +1,12 @@
+//sticky top nav
 window.addEventListener('scroll', function () {
     const stickyNav = document.querySelector('.sticky-nav');
 
     stickyNav.classList.toggle("sticky", window.scrollY > 0);
 })
 
+
+// toggle category tab
 function showCategory(e, category) {
     const categoryItems = document.querySelectorAll('.new-arrival .category');
     for (let i = 0; i < categoryItems.length; i++) {
@@ -20,3 +23,16 @@ function showCategory(e, category) {
 }
 
 document.getElementById('defaultShow').click()
+
+//back to top button
+const backToTopBtn = document.getElementById('top');
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "inline-flex";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
