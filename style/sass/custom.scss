@@ -151,3 +151,39 @@
 		}
 	}
 }
+
+.trending-category {
+	background-color: #f5f5f9;
+}
+
+.category-titles {
+	.active {
+		color: white;
+		background-color: #c40316;
+	}
+}
+
+.new-arrival {
+	.category {
+		display: none;
+		animation: fadeEffect 1s;
+	}
+	.category-item {
+		border: 1px solid #f5f5f9;
+
+		&:hover {
+			-webkit-box-shadow: -3px 6px 10px -6px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: -3px 6px 10px -6px rgba(0, 0, 0, 0.5);
+			box-shadow: -3px 6px 10px -6px rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+@keyframes fadeEffect {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

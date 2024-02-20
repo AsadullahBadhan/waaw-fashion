@@ -4,16 +4,19 @@ window.addEventListener('scroll', function () {
     stickyNav.classList.toggle("sticky", window.scrollY > 0);
 })
 
-const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
-    spaceBetween: 5,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
+function showCategory(e, category) {
+    const categoryItems = document.querySelectorAll('.new-arrival .category');
+    for (let i = 0; i < categoryItems.length; i++) {
+        categoryItems[i].style.display = 'none';
+    }
+
+    const newArrivalCategoris = document.querySelectorAll('.new-arrival .category-title');
+    for (let i = 0; i < newArrivalCategoris.length; i++) {
+        newArrivalCategoris[i].classList.remove('active')
+    }
+
+    document.getElementById(category).style.display = 'block';
+    e.currentTarget.className += " active";
+}
+
+document.getElementById('defaultShow').click()
